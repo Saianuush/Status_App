@@ -1,15 +1,16 @@
-import { Text, View, StyleSheet } from "react-native";
+import { Text, View, StyleSheet, ListRenderItemInfo } from "react-native";
 
 type TaskProp = {
-    task: {
-        subject: string;
-        streak: number;
-        week: number;
-        month: number;
-        revision: boolean;
-        revision_count: number;
-        added_on: string;
-    };
+  task: {
+    id: string;
+    subject: string;
+    streak: number;
+    week: number;
+    month: number;
+    revision: boolean;
+    revision_count: number;
+    added_on: string;
+  };
 };
 
 const Home_Task = ({task}: TaskProp) => {
@@ -44,8 +45,7 @@ const styles = StyleSheet.create({
         marginVertical: 10,
         marginHorizontal: 25,
         borderRadius: 10,
-        elevation: 8,
-
+        elevation: 8
     },
     "title":{
         borderRadius: 5,
